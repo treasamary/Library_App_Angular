@@ -1,0 +1,66 @@
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button> -->
+        <a href="/" class="navbar-brand">Home</a>
+      </div>
+      <nav class="navbar-fixed-top navbar-expand-lg" role="navigation" >
+          <div >
+            <ul class="nav navbar-nav" >
+                <li  style="padding: 10px;" >
+                  <a routerLink="/books" *ngIf="_auth.loggedIn()">Books</a>
+                  
+                </li>
+                
+                <li  style="padding: 10px;"  >
+                  <a routerLink="/authors" *ngIf="_auth.loggedIn()">Authors</a>
+                </li>
+                <li  style="padding: 10px;"  >
+                  <a routerLink="/addbook" *ngIf="_auth.loggedIn()">Add Book</a>
+                </li>
+                <li style="padding: 10px;"  >
+                  <a routerLink="/addauthor" *ngIf="_auth.loggedIn()">Add Author</a>
+                </li>
+                <li *ngIf="_auth.loggedIn()" (click)='logoutUser()' style="padding: 10px;"  >
+                  <a routerLink="/login">Log Out</a>
+                </li>
+                <li *ngIf="!_auth.loggedIn()" style="padding: 10px;"  >
+                  <a routerLink="/login">Log In</a>
+                </li>
+                <li *ngIf="!_auth.loggedIn()" style="padding: 10px;"  >
+                  <a routerLink="/register">Register</a>
+                </li>
+                
+              </ul>
+          </div>
+        
+        <!-- <ul class="nav navbar-nav" *ngFor="let i of nav1">
+            
+              <li>
+                  <span *ngIf="!isloggedin"><a href="#">{{i}}</a></span>
+                  
+                </li>
+                
+  
+            
+            
+          </ul> -->
+
+        <!-- <ul class="nav navbar-right navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+            <ul class="dropdown-menu" style="padding:12px;">
+              <form class="form-inline">
+                <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+              </form>
+            </ul>
+          </li>
+        </ul> -->
+      </nav>
+    </div>
+  </header>

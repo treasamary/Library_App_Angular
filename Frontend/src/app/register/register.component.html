@@ -1,0 +1,114 @@
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Sign Up
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <div class="col-md-5">
+          <div class="well well-lg"> 
+            <div class="row">
+              <div class="col-sm-12">
+                
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div><!-- /cont -->
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="top-spacer"> </div>
+        </div>
+      </div> 
+    </div><!-- /cont -->
+    
+  </div>
+  
+  
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel">
+          <div class="panel-body">
+            
+            
+            
+            <!--/stories-->
+            <div  >
+              <label ></label>
+              <form (ngSubmit)="addUser()" enctype="multipart/form-data" #userlogin="ngForm"  >
+          
+                <h1 class="myText">Create your account</h1>
+                <br>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" placeholder="Username" name="usrname" [(ngModel)]="userItem.usrname"  required  >
+                    <label  id="error1"></label>
+                </div>
+                <div class="form-group">
+                  <input type="contact number"  class="form-control" id="number" placeholder="Contact number" [(ngModel)]="userItem.number"  name="number" required >
+                  <label  id="error2"></label>
+               </div>
+                <div class="form-group">
+                  <input type="email"  class="form-control"  id="email" aria-describedby="emailHelp" placeholder="Email address" #email="ngModel" [class.is-invalid]="email.invalid && email.touched" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" [(ngModel)]="userItem.email"  name="email" required >
+                  <small class="text-danger" [class.d-none]="email.valid || email.touched">please enter a valid email</small>
+                  <label  id="error3"></label>
+                </div>
+                <div class="form-group">
+                   <input type="password"  class="form-control" id="pwd" placeholder="Password"  [(ngModel)]="userItem.password" #password="ngModel" name="password" [class.is-invalid]="password.invalid && password.touched" minlength="8" required >
+                  <small class="text-danger" [class.d-none]="password.valid || password.touched">please enter a strong password</small>
+                   
+                   <label  id="error4"></label>
+                   <!-- <span id="strength">Type Password</span> -->
+                </div>
+                <!-- <div class="form-group">
+                  <input type="password"  class="form-control" id="pwd2" placeholder="Confirm Password" FormControlName="cpassword" [(ngModel)]="user.cpassword" name="cpassword">
+                  <label  id="error5"></label>
+                  
+               </div> -->
+                <!-- <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" id="exampleCheck1" for="exampleCheck1">By clicking Sign Up, you agree to our Terms of Service.</label>
+                  <h1></h1>
+                  
+                </div> -->
+                <label id="check"></label>
+                <h1></h1>
+                <button type="submit" class="btn btn-primary btn-block" [disabled]="userlogin.form.invalid" >Sign Up</button>
+                
+      
+                <div class="myText">
+                  <h5>Already have an account? </h5>
+                  <a href="/login">click here</a>
+                </div>
+              </form>
+      
+              
+      
+        </div>
+            
+                  <!--/stories-->
+            
+            
+          
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>
+                                                  
+                                                                                  
+  <hr>
+  
+  
+  
